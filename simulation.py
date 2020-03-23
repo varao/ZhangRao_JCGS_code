@@ -35,7 +35,8 @@ def main():
     print('variance:', var)
     print('pi_0', pi_0)
     # sample observations
-    rate_matrix = constructor_rate_matrix(alpha, beta, 3)
+    rate_matrix = constructor_rate_matrix(alpha, beta, dim)
+    print('rate matrix: ', rate_matrix)
     base_path = MJPpath([0], [], t_start=t_start, t_end=t_end, rate_matrix=rate_matrix, initial_pi=pi_0)
     base_path.generate_newpath()
     observation = Observation(t_start=t_start, t_end=t_end)
