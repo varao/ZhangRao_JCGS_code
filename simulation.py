@@ -15,11 +15,12 @@ def save_list(x, filename):
 
 
 def main():
-    dim, alpha, beta, sample_n = int(sys.argv[1]), float(sys.argv[2]), float(sys.argv[3]), int(sys.argv[4])
+    dim, alpha, beta, sample_n, t_end = int(sys.argv[1]), float(sys.argv[2]), float(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5])
     seed = 1
     random.seed(seed)
     var = 0.5
-    t_start, t_end = 0, 20
+    t_start = 0 
+    #t_end = 20
     time_breaks = list(range(1, t_end))
     mu, lamb, omega, theta = 3.0, 2.0, 5.0, 2.0
     pi_0 = [1. / dim for i in range(dim)]
